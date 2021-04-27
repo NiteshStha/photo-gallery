@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import {
   Container,
   AppBar,
@@ -32,7 +33,11 @@ export default function Layout({ children, title }) {
                   variant="h6"
                   style={{ flexGrow: 1, marginLeft: '1rem' }}
                 >
-                  Photo Gallery
+                  <Link href="/">
+                    <a style={{ textDecoration: 'none', color: 'inherit' }}>
+                      Photo Gallery
+                    </a>
+                  </Link>
                 </Typography>
                 <Button color="inherit" style={{ textTransform: 'capitalize' }}>
                   Upload
@@ -45,17 +50,7 @@ export default function Layout({ children, title }) {
           maxWidth="md"
           style={{ marginTop: '5rem', marginBottom: '1rem' }}
         >
-          <Paper
-            elevation={0}
-            style={{
-              padding: '1rem',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              gridGap: '1rem',
-            }}
-          >
-            {children}
-          </Paper>
+          <Paper elevation={0}>{children}</Paper>
         </Container>
       </main>
     </>
