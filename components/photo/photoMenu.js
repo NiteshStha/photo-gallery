@@ -1,7 +1,8 @@
 import React from 'react';
 import { IconButton, Menu, MenuItem } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import StarIcon from '@material-ui/icons/Star';
+import CloudDownloadIcon from '@material-ui/icons/CloudDownload';
 
 export default function PhotoMenu({ photo }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -45,10 +46,14 @@ export default function PhotoMenu({ photo }) {
         onClose={handleClose}
         style={{ marginRight: 50 }}
       >
-        <MenuItem onClick={handleClose}>
-          Favourite &nbsp; <FavoriteIcon style={{ color: 'red' }} />
+        <MenuItem onClick={handleClose} style={{ fontSize: 14 }}>
+          <StarIcon style={{ color: '#ffd700', fontSize: 18 }} />
+          &nbsp; Favourite
         </MenuItem>
-        <MenuItem onClick={handleSave}>Download</MenuItem>
+        <MenuItem onClick={handleSave} style={{ fontSize: 14 }}>
+          <CloudDownloadIcon style={{ fontSize: 18 }} />
+          &nbsp; Download
+        </MenuItem>
       </Menu>
     </div>
   );

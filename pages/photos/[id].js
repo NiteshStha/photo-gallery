@@ -17,7 +17,7 @@ import PhotoMenu from '../../components/photo/photoMenu';
 
 export default function Photo({ photo }) {
   return (
-    <Layout title={`Gallery - ${photo.name}`}>
+    <Layout title={`Gallery - Photo`}>
       <Card key={photo.id}>
         <CardHeader
           avatar={

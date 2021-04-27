@@ -9,7 +9,8 @@ import {
   IconButton,
   Paper,
 } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+
+import SideBar from './sideBar';
 
 export default function Layout({ children, title }) {
   return (
@@ -26,9 +27,7 @@ export default function Layout({ children, title }) {
           <AppBar position="fixed">
             <Container maxWidth="md">
               <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu">
-                  <MenuIcon />
-                </IconButton>
+                <SideBar direction="left" />
                 <Typography
                   variant="h6"
                   style={{ flexGrow: 1, marginLeft: '1rem' }}
