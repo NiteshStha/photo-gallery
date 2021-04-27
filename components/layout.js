@@ -6,7 +6,6 @@ import {
   Toolbar,
   Typography,
   Button,
-  IconButton,
   Paper,
 } from '@material-ui/core';
 
