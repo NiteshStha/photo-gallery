@@ -38,7 +38,9 @@ export default function Layout({ children, title }) {
                   </Link>
                 </Typography>
                 <Button color="inherit" style={{ textTransform: 'capitalize' }}>
-                  Upload
+                  <Link href="/photos/upload">
+                    <a className="btn-link">Upload</a>
+                  </Link>
                 </Button>
               </Toolbar>
             </Container>
